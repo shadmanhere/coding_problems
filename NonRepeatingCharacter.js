@@ -19,3 +19,20 @@ function findNonRepeatingCharacter(string){
 console.log(
     findNonRepeatingCharacter('aabbcc')
 )
+
+function findNonRepeatingCharacter2(string){
+    let hashtable = {};
+    for(let i=0; i<string.length;i++){
+        if(hashtable.hasOwnProperty(string[i])) hashtable[string[i]]++
+        else hashtable[string[i]] = 1;
+    }
+    for(let i=0;i<string.length;i++){
+        if(hashtable[string[i]] == 1) return i;
+    }
+    return null;
+}
+
+
+console.log(
+    findNonRepeatingCharacter2('aabzbcc')
+)
