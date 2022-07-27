@@ -16,3 +16,23 @@ console.log(
     isPalindrome("ab"),
     isPalindrome("a"),
 )
+
+function isPalindrome2(string) {
+    let i=0;
+    let j=string.length - 1;
+    while(i<=j){
+        if(string[i] !== string[j]) return false;
+        else {
+            i++;
+            j--
+        }
+    }
+    return true;
+}
+
+console.log(
+    isPalindrome2("okay"),
+    isPalindrome2("malayalam"),
+    isPalindrome2("ab"),
+    isPalindrome2("a"),
+)
