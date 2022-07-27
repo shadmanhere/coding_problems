@@ -7,9 +7,9 @@ function longestSubstring(string) {
     for(let i=0; i< string.length; i++) {
         const char = string[i];
         if(char in seen) {
-            start = Math.max(start, seen[char]+1);
+            start = start > seen[char]+1 ? start : seen[char] + 1
         }
-        max = Math.max(max, i-start+1);
+        max = max > i-start+1 ? max : i-start+1;
         seen[char] = i;
     }
     return max;
