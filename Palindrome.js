@@ -5,7 +5,7 @@ function isPalindrome(string) {
         if(string[i] !== string[string.length - 1 - i]){
             return false;
         }
-        if(i === string.length - 1 - i) break;
+        if(i >= string.length - 1 - i) break;
     }
     return true
 }
